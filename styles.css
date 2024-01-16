@@ -1,158 +1,358 @@
-/* Reset default styles */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+/* Reset styles, general layout */
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-/* Global styles */
-:root {
-    --blood-red: #5D0801ff;
-    --light-blue: #C7E9EFff;
-    --caf-noir: #513622ff;
-    --tawny: #CB5819ff;
-    --ecru: #E1BD81ff;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* First Block styles */
+  .first-black {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .logo, .menu-button {
+    padding: 1rem;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .menu-button {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Second Block styles */
+  .second-black {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  
+  .slideshow-container {
+    position: relative;
+  }
+  
+  .slideshow-section img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .description-section {
+    text-align: left;
+    padding: 1rem;
+  }
+  
+  /* Third Block styles */
+  .third-black {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .animation-section {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffcc00;
+  }
+  
+  /* Fourth Block styles */
+  .fourth-black {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  /* Fifth Block styles */
+  .fifth-black {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .map-section {
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .slideshow-section {
+      grid-template-columns: 1fr;
+    }
+  }
+  /* Reset styles, general layout */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--light-blue);
-    color: var(--caf-noir);
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #444;
+  padding: 0.5rem;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: var(--blood-red);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-nav ul li {
-    margin-right: 20px;
+nav li {
+  display: inline;
+  margin-right: 20px;
 }
 
-nav ul li a {
-    font-weight: bold;
-    font-size: 1.2em;
-    color: var(--light-blue);
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom-color 0.3s ease;
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-nav ul li a:hover {
-    border-bottom-color: #8abfc6;
+/* Hero section styles */
+.hero {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f2f2f2;
 }
 
-.grid-container {
-    display: grid;
+.hero h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* About section styles */
+.about {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Events section styles */
+.events {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.events h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Event card styles */
+.event-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.event-card p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .about h2 {
+    font-size: 1.5rem;
+  }
+
+  .events h2 {
+    font-size: 1.5rem;
+  }
+}
+/* Reset styles, general layout */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* First Block styles */
+.first-black {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.logo, .menu-button {
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.menu-button {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Second Block styles */
+.second-black {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.slideshow-container {
+  position: relative;
+}
+
+.slideshow-section img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.description-section {
+  text-align: left;
+  padding: 1rem;
+}
+
+/* Third Block styles */
+.third-black {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.animation-section {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+/* Fourth Block styles */
+.fourth-black {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* Fifth Block styles */
+.fifth-black {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.map-section {
+  font-size: 1.2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .slideshow-section {
     grid-template-columns: 1fr;
+  }
 }
-
-.grid-item {
-    padding: 1em;
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.first-card img {
-    max-width: 200%;
-    height: auto;
-    border-radius: 12px;
-}
-
-.second-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--tawny);
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.second-card button {
-    background-color: var(--blood-red);
-    color: var(--light-blue);
-    padding: 8px 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.second-card button:hover {
-    background-color: var(--tawny);
-}
-
-.second-card ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-.second-card ul li {
-    margin: 5px 0;
-    font-size: 1.1em;
-}
-
-/* Store hours table styles */
-.store-hours {
-    margin: 20px auto;
-    border-collapse: collapse;
-    width: 80%;
-    background-color: var(--ecru);
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.store-hours caption {
-    font-size: 1.5em;
-    padding: 10px;
-    background-color: var(--blood-red);
-    color: var(--light-blue);
-    font-weight: bold;
-    border-bottom: 2px solid var(--light-blue);
-}
-
-.store-hours th, .store-hours td {
-    padding: 10px;
-    text-align: center;
-}
-
-.store-hours th {
-    background-color: var(--tawny);
-    color: var(--light-blue);
-}
-
-.store-hours td {
-    background-color: var(--ecru);
-    color: var(--caf-noir);
-}
-
-/* Media queries for responsiveness */
-@media (min-width: 768px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 
